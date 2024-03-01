@@ -1,0 +1,32 @@
+
+//Print sum of n Natural number Using Recursion
+
+import java.util.Scanner;
+
+public class Recursion3 {
+    int count =0;
+    int naturalnumber(int m, int n){
+        if(m<=n){
+            count = count+m;
+            naturalnumber(m+1,n);
+        }
+
+        return count;
+
+
+    }
+    public static void main(String[]args){
+
+        System.out.println("Enter a Number");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Recursion3 obj = new Recursion3();
+        int m=1;
+
+        int result = obj.naturalnumber(m,n);
+
+        System.out.println("The sum of n Natural no is " + result);
+
+    }
+}
+
