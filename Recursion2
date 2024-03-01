@@ -1,0 +1,22 @@
+//Print first 10 Natural no in Reverse Order
+
+public class Recursion2 {
+    int naturalnumber(int n,int m){
+        if(n>=m){
+            System.out.println(n);
+            naturalnumber(n-1,m);
+        }
+
+        return 1;
+
+
+    }
+    public static void main(String[]args){
+        int n = 10;
+        int m = 1;
+        Recursion2 obj = new Recursion2();
+
+        obj.naturalnumber(n,m);
+
+    }
+}
