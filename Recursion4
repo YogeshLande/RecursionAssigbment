@@ -1,0 +1,28 @@
+//Print the length of digits in number
+
+
+import java.util.Scanner;
+
+public class Recursion4 {
+    int count =0;
+    int length(int n){
+        if(n!=0){
+            int remd = n%10;
+            count++;
+            length(n/10);
+        }
+        return count;
+    }
+    public static void main(String[]args){
+
+        System.out.println("Enter a Number");
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Recursion4 obj = new Recursion4();
+        int digitlength = obj.length(n);
+
+        System.out.println("The length of number digits is "+digitlength);
+
+    }
+}
