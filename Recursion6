@@ -1,0 +1,28 @@
+//Print the Sum of digits in number
+
+
+import java.util.Scanner;
+
+public class Recursion6 {
+    int sum =0;
+    int length(int n){
+        if(n!=0){
+            int remd = n%10;
+            sum=sum+remd;
+            length(n/10);
+        }
+        return sum;
+    }
+    public static void main(String[]args){
+
+        System.out.println("Enter a Number");
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Recursion6 obj = new Recursion6();
+        int digitlength = obj.length(n);
+
+        System.out.println("The sum of  digits in number is : "+digitlength);
+
+    }
+}
